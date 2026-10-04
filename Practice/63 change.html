@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>change Event</title>
+</head>
+<body>
+    <h3>Select your Course </h3> 
+    <select id="course">
+        <option value="">Select Course</option>
+        <option value="CSE">CSE</option>
+        <option value="IT">IT</option>
+        <option value="ECE">ECE</option>
+    </select>   
+    <p id="result"></p>
+    <script>
+        let select = document.getElementById("course");
+        select.addEventListener("change", function() {
+            document.getElementById("result").innerHTML = "You selected: " + select.value;
+        });
+    </script>
+</body>
+</html>
